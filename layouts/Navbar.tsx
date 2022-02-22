@@ -3,8 +3,10 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 // import { Theme } from '../styles/theme';
 import Button from '../components/ui/Button';
-
-const Navbar: NextPage = () => {
+interface NavProps{
+	isActive : boolean
+}
+const Navbar: NextPage <NavProps> = ({isActive}) => {
 	const [navOpen, setNavOpen] = useState(true);
 	return (
 		<Header>
