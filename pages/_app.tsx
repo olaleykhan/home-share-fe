@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<ThemeProvider theme={myTheme}>
 				<GlobalStyle />
-				<Navbar />
+				<Navbar isActive= {true} />
 				<Component {...pageProps} />
 			</ThemeProvider>
 		</>
