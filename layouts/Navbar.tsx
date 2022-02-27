@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import styled from 'styled-components';
+import Link from 'next/link';
 // import { Theme } from '../styles/theme';
 import Button from '../components/ui/Button';
 interface NavProps{
@@ -16,15 +17,33 @@ const Navbar: NextPage <NavProps> = ({isActive}) => {
 				<NavCollapse show={navOpen}>
 					{' '}
 					<ul>
-						<li> Contact</li>
-						<li> About</li>
-						<li> Faqs</li>
+						<li>
+							<Link href="/" passHref>
+								<span>
+								Home
+								</span>
+							</Link>
+						</li>
+						<li>
+							<Link href="/contact" passHref>
+								<span>Contact</span>
+							</Link>
+						</li>
+						<li>
+							<Link href="/about" passHref>
+								<span>About</span>
+							</Link>
+						</li>
+						<li>
+							<Link href="/faqs" passHref>
+								<span>Faqs</span>
+							</Link>
+						</li>
 					</ul>
 					<div className='auth-btn'>
-						<Button rounded={true} text='sign/up' />
-						{/* {' '}
-								Sign/up
-							</Button> */}
+						<Link passHref href='/sign-up'>
+							<Button rounded={true} text='Sign Up' />
+						</Link> 
 					</div>
 				</NavCollapse>
 				{/* )} */}
@@ -96,13 +115,16 @@ const Nav = styled.nav`
 		ul {
 			display: flex;
 			li {
-				padding: 0.5rem 1rem;
-				margin: 0 1.5rem;
 				cursor: pointer;
-				&:hover {
-					color: ${({ theme }) => theme.colors.primary};
-					border-bottom: 2px solid ${({ theme }) => theme.colors?.primary};
-				}
+					span{
+						padding: 0.5rem 1rem;
+						margin: 0 1.5rem;
+						
+						&:hover {
+						color: ${({ theme }) => theme.colors.primary};
+						border-bottom: 2px solid ${({ theme }) => theme.colors?.primary};
+						}
+					}
 			}
 		}
 
@@ -128,11 +150,13 @@ const Toggle = styled.div`
 
 const NavCollapse = styled.div<{ show: boolean }>`
 	display: ${({ show }) => (show ? 'block' : 'none')};
+	
 	@media only screen and (min-width: 600px) {
 		display: block;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		
 	}
 `;
 export default Navbar;
