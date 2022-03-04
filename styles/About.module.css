@@ -1,0 +1,52 @@
+.container {
+    padding: 0 2rem;
+}
+
+.about_main{
+    padding: 5%;
+    color: white;
+}
+.about_card{
+    width: 90%;
+    height: 70vh;
+    margin: auto;
+    padding: 5%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    background-color: #639a30;
+    color: white;
+    display: flex;
+}
+.text_card{
+    flex: 1;
+    padding-right: 10%;
+}
+.text_card h1{
+    padding-bottom: 8%;
+}
+.text_card p{
+    font-weight: 300;
+}
+.img_carder{
+    border-radius: 15px;
+}
+.img_card{
+    flex: 1;
+    height: 100%;
+    /* width: fit-content; */
+    border-radius: 15%;
+}
+.bit_container{
+    display: flex;
+    justify-content: space-around;
+}
+.bit_card{
+    border-radius: 15px;
+    padding: 3%;
+    height: 70vh;
+    width: 20%;
+    background-color: #639a30;
+}
+.pic-fix{
+    border-radius: 15px;
+}

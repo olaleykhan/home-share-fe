@@ -11,7 +11,40 @@
   justify-content: center;
   align-items: center;
 }
-
+.mainintro{
+  margin: 5%;
+  height: 70vh;
+  background-color: beige;
+  border-radius: 20px;
+  display: flex;
+}
+.introtext{
+  font-size:1rem;
+  padding: 5%;
+  flex: 1;
+}
+.introtext h4{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.introimg{
+  flex: 1;
+}
+.mainjumb{
+  background-color: beige;
+  display: flex;
+  margin: 5%;
+  height: 90vh;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.flexme{
+  flex: 1;
+  padding: 5%;
+  align-self: center;
+}
+/***   footer styling ***/
 .footer {
   display: flex;
   flex: 1;

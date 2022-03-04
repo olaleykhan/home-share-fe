@@ -12,26 +12,21 @@ const Navbar: NextPage <NavProps> = ({isActive}) => {
 	return (
 		<Header>
 			<Nav>
-				<h2 className='logo'> HouseMates</h2>
+				<h2 className='logo'>
+					<Link href="/" passHref>HouseMates</Link> 
+				</h2>
 				{/* {navOpen && ( */}
 				<NavCollapse show={navOpen}>
 					{' '}
 					<ul>
 						<li>
-							<Link href="/" passHref>
-								<span>
-								Home
-								</span>
+							<Link href="/about" passHref>
+								<span>About</span>
 							</Link>
 						</li>
 						<li>
 							<Link href="/contact" passHref>
 								<span>Contact</span>
-							</Link>
-						</li>
-						<li>
-							<Link href="/about" passHref>
-								<span>About</span>
 							</Link>
 						</li>
 						<li>
@@ -41,8 +36,8 @@ const Navbar: NextPage <NavProps> = ({isActive}) => {
 						</li>
 					</ul>
 					<div className='auth-btn'>
-						<Link passHref href='/sign-up'>
-							<Button rounded={true} text='Sign Up' />
+						<Link passHref href='/signin'>
+							<Button rounded={true} text='Sign In' />
 						</Link> 
 					</div>
 				</NavCollapse>

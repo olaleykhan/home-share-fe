@@ -1,7 +1,10 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import Button from '../components/ui/Button';
+import roommate from '../assets/images/roommate-search.jpg';
 
  const Home: NextPage = () => {
 		return (
@@ -12,8 +15,44 @@ import styles from '../styles/Home.module.css'
 					<link rel='icon' href='/favicon.ico' />
 				</Head>
 
-				<main style={{ height: '300vh' }}> Hello miami</main>
-
+				<main style={{ height: '300vh' }}>
+					 <div className={styles.mainintro}>
+							<div className={styles.introtext}>
+								<h1> The reimagined way to find your house mate without stress and based on your preference.</h1>
+								<h4>
+									With Housemates, you do not have to worry about time and availability.
+									We do the talking for you by match making you! 
+								</h4>
+								<Link passHref href='/signup'>
+									<Button rounded={true} text='Get Started' />
+								</Link>
+							</div>
+							<div className={styles.introimg}>I AM A DIV THAT S EXPECTING AN IMAGE</div>
+						</div>
+					 <div className={styles.mainjumb}>
+					 	<div className={styles.flexme}>
+						 <Image src={roommate} alt='House search' />
+						 </div>
+					 	<div className={styles.flexme}>
+						 <p>Meeting your house mate should not be a hard task. Strike a conversation from the
+							comfort of your home.
+						</p>
+						 </div>
+					 	
+					 </div>
+					 <div className={styles.mainjumb}>
+					 	<p>Say Goodbye to stressing over finding housemate</p>
+					 	
+					 </div>
+					 {/* <div className={styles.mainintro}>
+					 	<p>i am the body of the page. I do not know what to contain.</p>
+					 	<p>i am the body of the page. I do not know what to contain.</p>
+					 	<p>i am the body of the page. I do not know what to contain.</p>
+					 	<p>i am the body of the page. I do not know what to contain.</p>
+					 	 
+					 </div> */}
+		
+				</main>
 				<footer className={styles.footer}>
 					<a
 						href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
