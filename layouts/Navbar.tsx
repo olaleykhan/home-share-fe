@@ -65,7 +65,7 @@ const Navbar: NextPage <NavProps> = ({isActive}) => {
 // }
 
 // interface IProps {
-// 	variant?: VARIANT;
+// 	variant?: VARIANT;	
 // }
 
 const Header = styled.header`
@@ -77,6 +77,8 @@ const Nav = styled.nav`
 	flex-direction: column;
 	/* justify-content: center; */
 	align-items: center;
+	/* margin-bottom: 100px;	 */
+
 	/* background-color: red; */
 	width: 100%;
 	margin: 0 auto;
@@ -111,15 +113,15 @@ const Nav = styled.nav`
 			display: flex;
 			li {
 				cursor: pointer;
-					span{
-						padding: 0.5rem 1rem;
-						margin: 0 1.5rem;
-						
-						&:hover {
+				span {
+					padding: 0.5rem 1rem;
+					margin: 0 1.5rem;
+
+					&:hover {
 						color: ${({ theme }) => theme.colors.primary};
 						border-bottom: 2px solid ${({ theme }) => theme.colors?.primary};
-						}
 					}
+				}
 			}
 		}
 

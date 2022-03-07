@@ -1,11 +1,11 @@
 import React from 'react';
+import type { NextPage } from 'next';
 import styled from 'styled-components';
-
 interface ButtonProps {
 	text: string;
 	rounded: boolean;
 }
-const Button: React.FC<ButtonProps> = ({ text, rounded }) => {
+const Button: NextPage<ButtonProps> = ({ text, rounded }) => {
 	return <Btn rounded={rounded}>{text}</Btn>;
 };
 
